@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">📚</span>
+            <span class="nav-title">Library Management</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="index.html" class="nav-login-btn">Login</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>Have a question, suggestion, or need assistance? We're here to help you.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Info Cards -->
+        <section class="info-section">
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p>123 Library Lane</p>
+                <p>Knowledge City, KC 45678</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <h3>Call Us</h3>
+                <p>+1 (555) 012-3456</p>
+                <p>Mon – Fri, 9 AM – 6 PM</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <h3>Email Us</h3>
+                <p>support@librarymgmt.com</p>
+                <p>We reply within 24 hours</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🕐</div>
+                <h3>Library Hours</h3>
+                <p>Mon – Fri: 8 AM – 8 PM</p>
+                <p>Sat – Sun: 10 AM – 5 PM</p>
+            </div>
+        </section>
+
+        <!-- Contact Form & Map -->
+        <section class="contact-section">
+
+            <!-- Contact Form -->
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you shortly.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form" novalidate>
+
+                    <!-- Name Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            <span class="field-error" id="firstNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            <span class="field-error" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                        <span class="field-error" id="emailError"></span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                        <span class="field-error" id="phoneError"></span>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="">— Select a subject —</option>
+                            <option value="membership">Membership Enquiry</option>
+                            <option value="book-request">Book Request</option>
+                            <option value="overdue">Overdue / Fine</option>
+                            <option value="lost">Lost Book</option>
+                            <option value="event">Library Event</option>
+                            <option value="feedback">Feedback / Suggestion</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="field-error" id="subjectError"></span>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe your query in detail…" required></textarea>
+                        <span class="field-error" id="messageError"></span>
+                        <span class="char-count" id="charCount">0 / 500</span>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            <span>Subscribe to our newsletter for new arrivals &amp; events</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loader" id="btnLoader" hidden>Sending…</span>
+                    </button>
+
+                    <!-- Form Response -->
+                    <div class="form-response" id="formResponse" hidden></div>
+                </form>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+
+                <!-- Map Placeholder -->
+                <div class="map-card">
+                    <h3>Find Us on the Map</h3>
+                    <div class="map-placeholder">
+                        <div class="map-pin">📍</div>
+                        <p>123 Library Lane,<br>Knowledge City</p>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="map-link">Open in Google Maps →</a>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="faq-card">
+                    <h3>Quick Help</h3>
+                    <div class="faq-list" id="faqList">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                How do I renew a book?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Log in to your account, go to "My Books," and click the Renew button next to the title. You can renew up to 2 times per book.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                How do I register as a member?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Click "Sign up here" on the Login page and complete the registration form. Your account will be activated within one business day.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                What are the late-return fines?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Fines are $0.25 per day per book. Overdue notices are emailed automatically. Pay online or at the front desk.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Can I request a specific book?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                Yes! Use the "Book Request" option in the contact form above or visit the front desk. We'll try to acquire it within 2–4 weeks.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-card">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook" aria-label="Facebook">
+                            <span class="social-icon">f</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Twitter / X">
+                            <span class="social-icon">𝕏</span>
+                            <span>Twitter / X</span>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <span class="social-icon">▣</span>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+            </aside>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span>📚</span>
+                <span>Library Management System</span>
+            </div>
+            <p class="footer-copy">&copy; 2025 Library Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
