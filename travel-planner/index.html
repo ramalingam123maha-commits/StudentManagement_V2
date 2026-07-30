@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-icon">🧭</span>
+                <span class="brand-name">Wanderlust</span>
+            </div>
+            <nav class="site-nav">
+                <a href="#planner">Plan a Trip</a>
+                <a href="#trips">My Trips</a>
+                <a href="#tips">Travel Tips</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Plan Your Next Adventure</h1>
+            <p>Organize destinations, dates, budgets and notes for every trip in one place.</p>
+            <a href="#planner" class="btn btn-primary">Start Planning</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="planner" class="planner-section card">
+            <h2>New Trip</h2>
+            <form id="tripForm" class="trip-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="e.g. Bali, Indonesia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget ($)</label>
+                        <input type="number" id="budget" name="budget" min="0" placeholder="e.g. 1500">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" name="endDate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes / Activities</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Things to do, places to visit..."></textarea>
+                </div>
+
+                <span class="error-message" id="formError"></span>
+
+                <button type="submit" class="btn btn-primary">Add Trip</button>
+            </form>
+        </section>
+
+        <section id="trips" class="trips-section">
+            <div class="trips-header">
+                <h2>My Trips</h2>
+                <div class="trips-summary">
+                    <span class="stat"><strong id="totalTrips">0</strong> trips</span>
+                    <span class="stat"><strong id="upcomingTrips">0</strong> upcoming</span>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="past">Past</button>
+            </div>
+
+            <div id="tripList" class="trip-list">
+                <p class="empty-state" id="emptyState">No trips yet. Start planning your first adventure above!</p>
+            </div>
+        </section>
+
+        <section id="tips" class="tips-section card">
+            <h2>Quick Travel Tips</h2>
+            <ul class="tips-list">
+                <li>📌 Book flights and accommodation early for better prices.</li>
+                <li>🧳 Pack light and keep essentials in your carry-on.</li>
+                <li>💳 Carry a mix of cash and cards, and notify your bank before traveling.</li>
+                <li>🩹 Keep a copy of important documents and travel insurance details.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 Wanderlust Travel Planner. Plan smart, travel far.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
