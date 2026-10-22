@@ -1,0 +1,31 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "Comprehensive Student Management Dashboard with Hotel Management and Task Manager Systems",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run start",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "test": "npm run test:server",
+    "test:server": "cd server && npm run test",
+    "start": "node server/dist/index.js",
+    "setup": "npm install && npm run setup:server && npm run setup:client",
+    "setup:server": "cd server && npm install",
+    "setup:client": "cd client && npm install"
+  },
+  "keywords": [
+    "student-management",
+    "hotel-management",
+    "task-manager",
+    "dashboard"
+  ],
+  "author": "Bold Create",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

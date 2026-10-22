@@ -1,0 +1,6 @@
+/* Reuse Management.css styles */
+@import './Management.css';
+
+.hotel-specific-styles {
+  /* Hotel-specific customizations if needed */
+}

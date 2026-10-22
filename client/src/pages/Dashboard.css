@@ -1,0 +1,175 @@
+.dashboard {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-heading {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.dashboard-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.feature-list {
+  margin-bottom: 2rem;
+}
+
+.feature-list h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+.feature-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 0.5rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.action-btn {
+  display: block;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-heading {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}

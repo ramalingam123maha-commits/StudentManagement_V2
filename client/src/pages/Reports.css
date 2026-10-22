@@ -1,0 +1,164 @@
+.reports-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.reports-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.report-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.report-icon {
+  font-size: 2rem;
+  color: #2563eb;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-content {
+  flex: 1;
+}
+
+.report-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.report-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+}
+
+.breakdown-item span:first-child {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-info {
+  background-color: #dbeafe;
+  color: #0c4a6e;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+}
+
+.metric span:first-child {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .report-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .report-icon {
+    min-width: auto;
+  }
+
+  .breakdown {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}
